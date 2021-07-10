@@ -23,6 +23,9 @@ data_split:
 train_random_forest:
   output_artifact: "random_forest_export"
   trainval_artifact: "trainval_data.csv:latest"
+test_regression_model:
+  mlflow_model: "random_forest_export:prod"
+  test_dataset: "test_data.csv:latest"
 modeling:
   # Fraction of data to use for test (the remaining will be used for train and validation)
   test_size: 0.2
