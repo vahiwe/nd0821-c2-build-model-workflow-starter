@@ -5,6 +5,11 @@ main:
   project_name: nyc_airbnb
   experiment_name: development
   steps: all
+basic_cleaning:
+  input_artifact: "sample.csv:latest"
+  output_artifact: "clean_sample.csv"
+  output_type: "clean_sample"
+  output_description: "Data with outliers and null values removed"
 etl:
   sample: "sample1.csv"
   min_price: 10  # dollars
