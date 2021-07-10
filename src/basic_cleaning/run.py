@@ -24,10 +24,6 @@ def go(args):
     logger.info(f'Downloading artifact {args.input_artifact}')
     artifact_local_path = run.use_artifact(args.input_artifact).file()
 
-    ######################
-    # YOUR CODE HERE     #
-    ######################
-
     # Read the data from the artifact
     logger.info("Loading Dataframe")
     df = pd.read_csv(artifact_local_path)
